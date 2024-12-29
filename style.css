@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* theme */
+/* .dark{
+    background-color: rgb(25,23,22);
+    color: rgb(238,224,203);
+}
+.white{
+    background-color: white;
+    color: black;
+} */
+
+/* game */
+body{
+    background-color: rgb(25,23,22);
+    text-align:center;
+}
+h1{
+    margin-top: 2rem;
+    padding:2rem;
+    color:rgb(238, 224, 203);
+}
+.dabba {
+    height:40vh;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:1.5vmin;
+}
+.game{
+    height:60vmin;
+    width:60vmin;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:1.5vmin;
+}
+.box{
+    background-color: #EEE0CB;
+    height: 18vmin;
+    width: 18vmin;
+    border-radius:1rem;
+    border:none;
+    box-shadow:0 0 1rem rgba(0,0,0,1);
+    font-size: 9vmin;
+    color: black;
+}
+#restart{
+    padding:1rem;
+    font-size: 1.25rem;
+    background-color: #ED6A5A;
+    color:rgb(0, 0, 0);
+    border-radius:0.85rem ;
+    margin-top: 11rem;
+}
+#new{
+    padding:1rem;
+    font-size: 1.25rem;
+    background-color: #ED6A5A;
+    color:rgb(0, 0, 0);
+    border-radius:0.85rem ;
+}
+#msg{
+    margin-top: 5rem;
+    color:rgb(238, 224, 203);
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.msg-dabba{
+    height:20vmin;  
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+.hide{
+    display:none;
+}
