@@ -58,9 +58,20 @@ const winnerCheck = () => {
     if(pos1Value!="" && pos2Value!="" && pos3Value!=""){
         if(pos1Value===pos2Value && pos2Value===pos3Value){
             showWinner(pos1Value);
+            return;
         }
     }
+}
+const allFilled = Array.from(boxes).every((box) => box.innerText !== "");
+    if (allFilled) {
+        showDraw();
+    }
 };
+
+const showDraw = () => {
+    msg.innerText = "It's a draw!";
+    msgDabba.classList.remove("hide");
+    disableBoxes();
 };
 
 const showWinner = (winner) => {
