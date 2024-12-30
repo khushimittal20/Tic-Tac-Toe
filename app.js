@@ -1,18 +1,25 @@
-// Theme
-// let themeBtn = document.querySelector("#theme");
-// let body = document.querySelector("body");
-// let currentTheme = "light";
-// themeBtn.addEventListener("click", () => {
-//     if(currentTheme === "light"){
-//         currentTheme = "dark";
-//         body.classList.add("dark");
-//         body.classList.remove("light");
-//     }else{
-//         currentTheme = "light";
-//         body.classList.add("light");
-//         body.classList.remove("dark");
-//     }
-// });
+const themeToggleButton = document.getElementById('theme-toggle');
+const bodyElement = document.body;
+
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme) {
+    bodyElement.classList.add(currentTheme);
+}
+
+const toggleTheme = () => {
+    if (bodyElement.classList.contains('dark-theme')) {
+        bodyElement.classList.remove('dark-theme');
+        bodyElement.classList.add('light-theme');
+        localStorage.setItem('theme', 'light-theme'); 
+    } else {
+        bodyElement.classList.remove('light-theme');
+        bodyElement.classList.add('dark-theme');
+        localStorage.setItem('theme', 'dark-theme'); 
+    }
+};
+
+themeToggleButton.addEventListener('click', toggleTheme);
 
 
 // game
@@ -38,9 +45,13 @@ boxes.forEach((box) =>{
     box.addEventListener("click", () => {
         if(chanceO === true){
             box.innerText = "O";
+            box.classList.add("o-color"); 
+            box.classList.remove("x-color"); 
             chanceO = false;
         }else{
             box.innerText = "X";
+            box.classList.add("x-color"); 
+            box.classList.remove("o-color"); 
             chanceO = true;
         }
         box.disabled = true;
