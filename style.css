@@ -24,7 +24,7 @@ h1{
     color:rgb(238, 224, 203);
 }
 .dabba {
-    height:40vh;
+    height:50vh;
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
